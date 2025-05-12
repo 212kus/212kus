@@ -1,114 +1,130 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>中武 磨美 - Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>中武 磨美のポートフォリオ詳細</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background-color: #f9fbff;
+      color: #1f3f7f;
       margin: 0;
-      font-family: 'Noto Sans JP', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      line-height: 1.8;
+      padding: 0 20px 60px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .hero {
-      background: linear-gradient(to right, #f8f8f8, #e6e6e6);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    header {
+      padding: 60px 0 30px;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5em;
+    header h1 {
+      font-size: 2.5rem;
+      color: #1a2a6c;
     }
 
-    .hero p {
-      font-size: 1.2rem;
-      color: #666;
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .section {
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s ease, transform 1s ease;
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #4263eb;
+      font-weight: bold;
     }
 
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    section {
+      margin-bottom: 80px;
     }
 
-    h2 {
-      font-weight: 700;
-      margin-bottom: 20px;
+    section h2 {
       font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #1a2a6c;
     }
 
-    ul {
-      padding-left: 20px;
+    section p {
+      font-size: 1.1rem;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      line-height: 2;
     }
 
     footer {
       text-align: center;
       padding: 40px 0;
-      background-color: #f2f2f2;
-      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>中武 磨美</h1>
-      <p>名古屋市立大学 経済学部</p>
-    </div>
+  <header>
+    <h1>中武 磨美のポートフォリオ詳細</h1>
   </header>
 
-  <section class="section fade-in">
-    <h2>自己紹介</h2>
-    <p>大学では経済学を学んでいます。人と関わることが好きで、日々の小さな気づきを大切にしています。</p>
+  <nav>
+    <a href="#banpaku">万博</a>
+    <a href="#mahjong">麻雀</a>
+    <a href="#sweets">お菓子</a>
+    <a href="#asia">旅行</a>
+    <a href="#cat">愛猫</a>
+  </nav>
+
+  <section id="banpaku">
+    <h2>万博に行った話</h2>
+    <p>
+      朝一で「スシロー万博未来店」に行って、すんなり入れた。<br>
+      大豆のネギトロなど未来的なメニューが揃っていてワクワクしたけど、<br>
+      味の保証は……正直なかった（笑）。<br>
+      万博の世界観と実験的なフード体験は、今でも強烈に覚えている。
+    </p>
   </section>
 
-  <section class="section fade-in">
-    <h2>趣味</h2>
-    <ul>
-      <li>音楽を聴くこと（洋楽・邦楽問わず）</li>
-      <li>ジムでのトレーニング</li>
-      <li>旅行やカフェ巡り</li>
-      <li>漫画やアニメ</li>
-    </ul>
+  <section id="mahjong">
+    <h2>麻雀が好き</h2>
+    <p>
+      麻雀は小さい頃から家族で楽しんでいた遊び。<br>
+      最近は雀荘に行く友達を探し中。<br>
+      好きな役は「嶺上開花」。<br>
+      あの一発逆転感がたまらない。
+    </p>
   </section>
 
-  <section class="section fade-in">
-    <h2>現在取り組んでいること</h2>
-    <p>ゼミでは、NoCodeツールを使ったアプリ開発に取り組んでいます。少しずつ形にしていく過程を楽しんでいます。</p>
+  <section id="sweets">
+    <h2>お菓子作りにハマってる</h2>
+    <p>
+      特に得意なのは「角の立ったメレンゲ」を速く作ること。<br>
+      ふわっとした食感と美しい見た目を両立させるのが楽しい。<br>
+      もっといろんなジャンルのお菓子にも挑戦していきたい！
+    </p>
+  </section>
+
+  <section id="asia">
+    <h2>海外旅行と東南アジア市場</h2>
+    <p>
+      今まで約10カ国を旅してきた。<br>
+      特に衝撃だったのはカンボジアの市場。<br>
+      四方八方、生肉の解体ショーや蛙の死体が並んでいて…本当に戦慄した。<br>
+      でも、そういうリアルな文化体験も含めて旅が好き。
+    </p>
+  </section>
+
+  <section id="cat">
+    <h2>一人暮らしと愛猫</h2>
+    <p>
+      猫との出会いは、猫と人のマッチングサービス。<br>
+      山口県まで迎えに行ったその子は、今では私の生活の一部。<br>
+      よく食べて、よく寝て、死ぬほどかわいい存在。
+    </p>
   </section>
 
   <footer>
-    <p>© 2025 中武 磨美</p>
+    © 2025 中武 磨美
   </footer>
-
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-    window.addEventListener('scroll', () => {
-      fadeEls.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add('visible');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
-
-
