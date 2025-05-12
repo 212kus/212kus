@@ -1,133 +1,140 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>中武 磨美のポートフォリオ詳細</title>
+  <title>Mami Nakatake</title>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Zen Kaku Gothic New', sans-serif;
-      background-color: #f9fbff;
-      color: #1f3f7f;
       margin: 0;
-      padding: 0 20px 60px;
-      max-width: 900px;
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background: #111;
+      color: #fff;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      padding: 0 20px 100px;
+      max-width: 1000px;
       margin: auto;
     }
-
-    header {
-      padding: 60px 0 30px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #1a2a6c;
-    }
-
-    nav {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #4263eb;
-      font-weight: bold;
-    }
-
-    section {
-      margin-bottom: 80px;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      color: #1a2a6c;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      background: #ffffff;
-      padding: 20px;
+    .block {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      line-height: 2;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
-
+    .block img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .block:hover img {
+      transform: scale(1.05);
+    }
+    .caption {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+    .text {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease;
+      background: #1e1e1e;
+      padding: 0 20px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .block.open .text {
+      max-height: 300px;
+      padding: 20px;
+    }
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 40px;
+      color: #888;
       font-size: 0.9rem;
-      color: #999;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>中武 磨美のポートフォリオ詳細</h1>
+    <h1>Mami Nakatake</h1>
   </header>
 
-  <nav>
-    <a href="#banpaku">万博</a>
-    <a href="#mahjong">麻雀</a>
-    <a href="#sweets">お菓子</a>
-    <a href="#asia">旅行</a>
-    <a href="#cat">愛猫</a>
-  </nav>
+  <div class="gallery">
 
-  <section id="banpaku">
-    <h2>万博に行った話</h2>
-    <p>
-      朝一で「スシロー万博未来店」に行って、すんなり入れた。<br>
-      大豆のネギトロなど未来的なメニューが揃っていてワクワクしたけど、<br>
-      味の保証は……正直なかった（笑）。<br>
-      万博の世界観と実験的なフード体験は、今でも強烈に覚えている。
-    </p>
-  </section>
+    <div class="block" onclick="this.classList.toggle('open')">
+      <img src="AAE974D3-D8FF-4400-AD99-16AC635A104F.jpeg" alt="Expo">
+      <div class="caption">Expo 2025</div>
+      <div class="text">
+        I visited the Sushiro EXPO Future Store first thing in the morning and got in smoothly.
+        I tried things like soy-based negitoro — it was experimental but not exactly tasty.
+        The experience itself was fun and unforgettable.
+      </div>
+    </div>
 
-  <section id="mahjong">
-    <h2>麻雀が好き</h2>
-    <p>
-      麻雀は小さい頃から家族で楽しんでいた遊び。<br>
-      最近は雀荘に行く友達を探し中。<br>
-      好きな役は「嶺上開花」。<br>
-      あの一発逆転感がたまらない。
-    </p>
-  </section>
+    <div class="block" onclick="this.classList.toggle('open')">
+      <img src="72656882-8F10-4388-9841-E6A489A6291F.jpeg" alt="Mahjong">
+      <div class="caption">Mahjong</div>
+      <div class="text">
+        I grew up playing mahjong with my family. Recently, I’ve been looking for friends to go to a mahjong parlor with.
+        My favorite yaku is Rinshan Kaihou — I love the surprise comeback.
+      </div>
+    </div>
 
-  <section id="sweets">
-    <h2>お菓子作りにハマってる</h2>
-    <p>
-      特に得意なのは「角の立ったメレンゲ」を速く作ること。<br>
-      ふわっとした食感と美しい見た目を両立させるのが楽しい。<br>
-      もっといろんなジャンルのお菓子にも挑戦していきたい！
-    </p>
-  </section>
+    <div class="block" onclick="this.classList.toggle('open')">
+      <img src="B57FE3C7-E409-47E6-8666-0FFABB5BA61A.jpeg" alt="Baking">
+      <div class="caption">Baking</div>
+      <div class="text">
+        I'm especially good at whipping firm-peaked meringue quickly.
+        I love making pretty and fluffy desserts, and I'm always excited to try new kinds.
+      </div>
+    </div>
 
-  <section id="asia">
-    <h2>海外旅行と東南アジア市場</h2>
-    <p>
-      今まで約10カ国を旅してきた。<br>
-      特に衝撃だったのはカンボジアの市場。<br>
-      四方八方、生肉の解体ショーや蛙の死体が並んでいて…本当に戦慄した。<br>
-      でも、そういうリアルな文化体験も含めて旅が好き。
-    </p>
-  </section>
+    <div class="block" onclick="this.classList.toggle('open')">
+      <img src="3A76DD16-879B-4ECB-ADF0-1B20DC16AC5A.jpeg" alt="Travel">
+      <div class="caption">Southeast Asia</div>
+      <div class="text">
+        I’ve traveled to about 10 countries so far.
+        In Cambodia, I saw raw meat and frogs at every corner of the market — it was shocking, but fascinating.
+      </div>
+    </div>
 
-  <section id="cat">
-    <h2>一人暮らしと愛猫</h2>
-    <p>
-      猫との出会いは、猫と人のマッチングサービス。<br>
-      山口県まで迎えに行ったその子は、今では私の生活の一部。<br>
-      よく食べて、よく寝て、死ぬほどかわいい存在。
-    </p>
-  </section>
+    <div class="block" onclick="this.classList.toggle('open')">
+      <img src="9E6117FE-5057-4AE0-A10A-DB70AA3075FB.jpeg" alt="Cat">
+      <div class="caption">My Cat</div>
+      <div class="text">
+        I met my cat through a pet matching service and traveled all the way to Yamaguchi to bring her home.
+        She eats a lot, sleeps a lot, and is endlessly adorable.
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    © 2025 中武 磨美
+    © 2025 Mami Nakatake
   </footer>
+
 </body>
 </html>
